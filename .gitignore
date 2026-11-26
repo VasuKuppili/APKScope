@@ -1,0 +1,57 @@
+# Environment & Secrets
+.env
+.env.*
+*.env
+*.env.*
+*.local
+
+# Cache & Local Intelligence
+.threat_intel_cache.json
+*.cache
+
+# Python
+venv/
+.venv/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyd
+
+# Storage & Databases
+uploads/*
+!uploads/.gitkeep
+reports/*
+!reports/.gitkeep
+*.db
+*.sqlite
+*.sqlite3
+
+# Node
+node_modules/
+dist/
+.vite/
+
+# External Tools
+external_tools/
+
+# Executables & Binaries & Keystores
+*.exe
+*.dll
+*.so
+*.dylib
+*.bin
+*.msi
+*.apk
+*.zip
+*.tar
+*.gz
+*.7z
+*.iso
+*.keystore
+*.jks
+
+# Logs & Temp
+*.log
+.DS_Store
+Thumbs.db

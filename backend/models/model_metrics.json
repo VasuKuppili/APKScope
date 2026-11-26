@@ -1,0 +1,19 @@
+{
+  "model_type": "RandomForestClassifier",
+  "model_version": "1.0.0",
+  "dataset_benchmark": "Drebin / CICInvesAndMal2019 Compatible Schema",
+  "num_features": 69,
+  "classes": [
+    "Adware",
+    "Benign",
+    "Dropper",
+    "Ransomware",
+    "Spyware",
+    "Trojan.Banker"
+  ],
+  "precision": 0.9988,
+  "recall": 0.9988,
+  "f1_score": 0.9988,
+  "balanced_accuracy": 0.9995,
+  "matthews_correlation_coefficient": 0.9984
+}
