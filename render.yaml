@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: apkscope-api
+    runtime: docker
+    dockerfilePath: Dockerfile
+    plan: free
+    healthCheckPath: /api/health
+    envVars:
+      - key: DATABASE_URL
+        value: sqlite:///./database.db
+      - key: SECRET_KEY
+        generateValue: true
+      - key: UPLOAD_DIR
+        value: backend/uploads
+      - key: REPORT_DIR
+        value: backend/reports
+      - key: GEMINI_MODEL
+        value: gemini-2.5-flash
+      - key: GEMINI_API_KEY
+        sync: false
