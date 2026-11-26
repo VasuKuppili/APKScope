@@ -22,6 +22,17 @@ export default function App() {
   const [activeJob, setActiveJob] = useState(null);
   const [resultJobId, setResultJobId] = useState(null);
 
+  // Initialize theme from storage
+  useEffect(() => {
+    const savedTheme = localStorage.getItem('app_theme') || 'dark';
+    if (savedTheme === 'system') {
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      document.documentElement.setAttribute('data-theme', prefersDark ? 'dark' : 'light');
+    } else {
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    }
+  }, []);
+
   // Periodic health check
   useEffect(() => {
     checkHealth()
